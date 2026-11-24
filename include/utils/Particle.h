@@ -1,10 +1,12 @@
 #pragma once
 
+#include "raylib.h"
+
 struct Particle {
-	float x, y, z;
-	float velocityX, velocityY, velocityZ;
+	Vector3 position;
+	Vector3 velocity;
 	float mass;
-	int radius;
+	float radius;
 
 	void Update(float deltaTime);
 };

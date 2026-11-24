@@ -30,9 +30,15 @@ find_package(CUDAToolkit REQUIRED)
 # Defines the executable
 add_executable (ParticleLabs
     src/main.cpp
-    "src/ParticleSystem.cpp"
-    "src/Particle.cpp"
-)
+    
+    
+    "include/simulation/SimulationConfig.h"
+    "include/simulation/Simulation.h"
+    "include/utils/SpatialGridData.h"
+    "include/simulation/ParticleSimulation.h"
+    "src/ParticleSimulation.tpp" 
+    "include/simulation/storage/AoSStorage.h" 
+    "include/simulation/storage/SoAStorage.h" "include/simulation/SpatialParticleSimulation.h")
 
 # Link CUDA runtime
 target_link_libraries(ParticleLabs PRIVATE 
